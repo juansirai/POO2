@@ -51,4 +51,8 @@ public class Usuario {
 		this.tweets.stream().forEach(t -> t.eliminarRT());
 		this.tweets.clear();
 	}
+	
+	public List<Tweet> getTweets(){
+		return this.tweets;
+	}
 }

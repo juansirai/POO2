@@ -8,5 +8,10 @@ public class Retweet extends Tweet{
 		this.origen = origen;
 		
 	}
+	
+	public Tweet getOrigen() {
+		return this.origen;
+	}
+	
 
 }

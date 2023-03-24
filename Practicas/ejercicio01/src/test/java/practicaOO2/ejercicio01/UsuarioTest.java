@@ -47,4 +47,20 @@ public class UsuarioTest {
         		+ "Commentss");
         assertNull(t_erroneo);
     }
+    
+    @Test
+    public void testRetwit() {
+    	Tweet t = guido.twitear("prueba");
+    	Retweet rt = james.retwitear(t);
+    	assertEquals(t, rt.getOrigen());
+    }
+    
+    @Test
+    public void eliminarTweet() {
+    	Tweet t1 = james.twitear("Hola");
+    	Tweet t2 = james.twitear("Hola2");
+    	assertEquals(2, james.getTweets().size());
+    	james.eliminarTweets();
+    	assertEquals(0, james.getTweets().size());
+    }
 }

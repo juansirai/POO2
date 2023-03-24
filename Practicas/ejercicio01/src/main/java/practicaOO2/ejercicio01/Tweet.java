@@ -28,4 +28,8 @@ public class Tweet {
     public void eliminarRT() {
     	this.retweets.clear();
     }
+    
+    public List<Retweet> getRT(){
+    	return this.retweets;
+    }
 }
