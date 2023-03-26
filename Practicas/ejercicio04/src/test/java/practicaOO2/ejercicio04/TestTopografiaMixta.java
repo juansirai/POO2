@@ -57,6 +57,31 @@ public class TestTopografiaMixta {
 		m3.addComponent(m2);
 		assertEquals(0.34375, m3.calcularProporcionAgua());
 		
+		
+		/*testing topografy pantano*/
+		TopografiaMixta m11 = new TopografiaMixta();
+		TopografiaMixta m22 = new TopografiaMixta();
+
+		Topografia a11 = new TopografiaAgua();
+		Topografia a22 = new TopografiaAgua();
+		Topografia t11 = new TopografiaTierra();
+		Topografia p22 = new TopografiaPantano();
+		m11.addComponent(a11);
+		m11.addComponent(a22);
+		m11.addComponent(t11);
+		m11.addComponent(p22);
+		assertEquals(0.675, m11.calcularProporcionAgua());
+		
+
+		Topografia a33 = new TopografiaAgua();
+		Topografia t33 = new TopografiaTierra();
+		Topografia t44 = new TopografiaTierra();
+		m22.addComponent(a33);
+		m22.addComponent(t33);
+		m22.addComponent(t44);
+		m22.addComponent(m11);
+		assertEquals(0.41875, m22.calcularProporcionAgua());
+		
 	}
 	
 	@Test
