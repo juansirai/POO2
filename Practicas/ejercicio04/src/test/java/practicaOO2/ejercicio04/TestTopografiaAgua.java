@@ -10,7 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class TestTopografiaAgua {
-	private Topografia topografiaAgua;
+	private TopografiaAgua topografiaAgua;
 	
 	@BeforeEach
 	void setUp() throws Exception{
@@ -20,5 +20,13 @@ public class TestTopografiaAgua {
 	@Test
 	public void testProporcion() {
 		assertEquals(1, topografiaAgua.calcularProporcionAgua());
+	}
+	
+	@Test
+	public void testIgualdad() {
+		TopografiaAgua a2 = new TopografiaAgua();
+		TopografiaTierra t1 = new TopografiaTierra();
+		assertTrue(topografiaAgua.esIgualA(a2));
+		assertFalse(topografiaAgua.esIgualA(t1));
 	}
 }

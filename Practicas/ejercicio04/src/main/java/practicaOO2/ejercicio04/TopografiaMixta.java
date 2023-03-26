@@ -2,6 +2,7 @@ package practicaOO2.ejercicio04;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class TopografiaMixta implements Topografia{
 	protected List<Topografia> components;
@@ -20,5 +21,23 @@ public class TopografiaMixta implements Topografia{
 	
 	public double calcularProporcionAgua() {
 		return this.components.stream().mapToDouble(c -> c.calcularProporcionAgua()).sum() / 4;
+	}
+	
+	public List<Topografia> getComponents(){
+		return this.components;
+	}
+	
+	
+	public boolean esIgualA(Topografia t) {
+		if(!(t.getComponents() instanceof List<?>))
+				return false;
+		
+		Iterator<Topografia> t1 = this.components.iterator();
+		Iterator<Topografia> t2 = ((List<Topografia>) t.getComponents()).iterator();
+		boolean continua = true;
+		while (t1.hasNext() && t2.hasNext() && continua) {
+		    continua = t1.next().esIgualA(t2.next());
+		}
+		return continua;
 	}
 }
