@@ -12,19 +12,19 @@ public class Archivo extends FileSystem{
 	@Override
 	public int tamanioTotalOcupado() {
 		// TODO Auto-generated method stub
-		return 0;
+		return super.getTamanio();
 	}
 
 	@Override
 	public Archivo archivoMasGrande() {
 		// TODO Auto-generated method stub
-		return null;
+		return this;
 	}
 
 	@Override
 	public Archivo archivoMasNuevo() {
 		// TODO Auto-generated method stub
-		return null;
+		return this;
 	}
 	
 	

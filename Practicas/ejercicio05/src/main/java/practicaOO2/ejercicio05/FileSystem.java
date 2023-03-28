@@ -25,8 +25,21 @@ public abstract class FileSystem {
 	}
 	
 
-	
+	/*
+	Retorna el espacio total ocupado, incluyendo su contenido.
+	*/
 	public abstract int tamanioTotalOcupado();
+	
+	
+	/*
+	* Retorna el archivo con mayor cantidad de bytes en cualquier nivel del
+	* filesystem contenido por directorio receptor
+	*/
 	public abstract Archivo archivoMasGrande();
+	
+	/*
+	* Retorna el archivo con fecha de creación más reciente en cualquier nivel
+	* del filesystem contenido por directorio receptor.
+	*/
 	public abstract Archivo archivoMasNuevo();
 }
