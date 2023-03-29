@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Directorio extends FileSystem{
 	private List<FileSystem> contenido;
@@ -30,20 +32,35 @@ public class Directorio extends FileSystem{
 		return this.getTamanio() + this.contenido.stream()
 									.mapToInt(c -> c.tamanioTotalOcupado()).sum();
 	}
+	
+	private boolean tieneElementos() {
+		return this.contenido.size()>0;
+	}
 
 	@Override
 	public Archivo archivoMasGrande() {
-		List<Archivo> sorted = this.contenido.stream()
-					    	    .map(c -> c.archivoMasGrande()).collect(Collectors.toList())
+		Archivo result = null;
+		if(this.tieneElementos()) {
+			List<Archivo> sorted = this.contenido.stream()
+								.map(c -> c.archivoMasGrande()).collect(Collectors.toList())
 					    	    .stream().sorted((a1, a2) -> Integer.compare(a2.archivoMasGrande().getTamanio(), a1.archivoMasGrande().getTamanio()))
 					    	    .collect(Collectors.toList());
-		Archivo result = sorted.get(0);
-		return null;
+		
+			result = sorted.get(0);
+		}
+		return result;
 	}
 
 	@Override
 	public Archivo archivoMasNuevo() {
-		// TODO Auto-generated method stub
-		return null;
+		Archivo result = null;
+		if(this.tieneElementos()) {
+			List<Archivo> sorted =  this.contenido.stream()
+				                .map(c -> c.archivoMasGrande()).collect(Collectors.toList())
+				                .stream().sorted((a1, a2) -> a2.getFecha().compareTo(a1.getFecha()))
+				                .collect(Collectors.toList());
+			result = sorted.get(0);
+		}
+		return result;
 	}
 }
