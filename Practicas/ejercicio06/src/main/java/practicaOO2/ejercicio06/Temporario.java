@@ -4,23 +4,26 @@ public class Temporario extends Empleado{
 	private int horasTrabajadas;
 	private boolean casado;
 	private int cantHijos;
+	private double ADICIONALHIJOS = 2000;
+	private double ADICIONALCASADO = 5000;
+	private double ADICIONALHORAS = 300;
 
 	public Temporario() {
-		super.setBase(20000);
+		super();
 		this.horasTrabajadas = 0;
 		this.casado = false;
 		this.cantHijos = 0;
 	}
 	
 	public Temporario(boolean casado, int hijos) {
-		super.setBase(20000);
+		super();
 		this.horasTrabajadas = 0;
 		this.casado = casado;
 		this.cantHijos = hijos;
 	}
 	
 	public Temporario(int horas, boolean casado, int hijos) {
-		super.setBase(20000);
+		super();
 		this.horasTrabajadas = horas;
 		this.casado = casado;
 		this.cantHijos = hijos;
@@ -36,13 +39,15 @@ public class Temporario extends Empleado{
 	
 	
 	public double calcularBasico() {
-		return this.getHoras()*300 + super.calcularBasico();
+		return this.getHoras() * this.ADICIONALHORAS + super.calcularBasico();
 	}
 
 	@Override
 	public double calcularAdicional() {
-		// TODO Auto-generated method stub
-		return 0;
+		if(this.casado)
+			return this.ADICIONALCASADO + this.ADICIONALHIJOS * this.cantHijos;
+		else
+			return this.ADICIONALHIJOS * this.cantHijos;
 	}
 
 	
