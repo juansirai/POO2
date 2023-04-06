@@ -1,12 +1,15 @@
 package practicaOO2.ejercicio07;
 
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 
 public abstract class State {
-	protected LocalDate time;
+	protected Instant time;
 	
 	public State() {
-		this.time = LocalDate.now();
+		this.time = LocalDateTime.now().toInstant(ZoneOffset.UTC);
 	}
 	
 	public abstract void start(ToDoItem context);
@@ -17,7 +20,7 @@ public abstract class State {
 	
 	public abstract void addComment(ToDoItem context, String comment);
 	
-	public LocalDate getTime() {
+	public Instant getTime() {
 		return this.time;
 	}
 }

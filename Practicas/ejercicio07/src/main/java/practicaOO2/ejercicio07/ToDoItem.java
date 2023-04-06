@@ -55,7 +55,7 @@ public class ToDoItem {
 				.filter(s -> s instanceof InProgress)
 				.findFirst().orElse(null);
 		if(start == null) {
-			throw new RuntimeException("El objeto ToDoItem no inició");
+			throw new RuntimeException("El objeto ToDoItem no inicio");
 		}
 		else {
 			State current = this.statesLog.get(this.statesLog.size()-1);
@@ -82,5 +82,9 @@ public class ToDoItem {
 	
 	public String showComments() {
 		return String.join(" || ", this.comments);
+	}
+	
+	public List<State> getStates(){
+		return this.statesLog;
 	}
 }
