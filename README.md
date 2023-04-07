@@ -8,3 +8,5 @@
 * [Ejercicio 04](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio04/src)
 * [Ejercicio 05](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio05/src)
 * [Ejercicio 06](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio06/src)
+* [Ejercicio 07](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio07/src)
+* [Ejercicio 08](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio08/src)
