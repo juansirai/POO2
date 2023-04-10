@@ -10,3 +10,4 @@
 * [Ejercicio 06](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio06/src)
 * [Ejercicio 07](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio07/src)
 * [Ejercicio 08](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio08/src)
+* [Ejercicio 09](https://github.com/juansirai/POO2/blob/main/UML/ejercicio09.png)
