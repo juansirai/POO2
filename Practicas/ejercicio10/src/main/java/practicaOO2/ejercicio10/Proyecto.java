@@ -12,6 +12,7 @@ public class Proyecto {
 	private double margenGanancia;
 	private Etapa etapa;
 	private static double GANANCIAESTANDAR = 0.07;
+	private static String TEXTOCANCELACION = "(Cancelado)";
 	
 	
 	/*Se crea el proyecto en etapa “En construcción” con
@@ -55,5 +56,21 @@ public class Proyecto {
 	
 	public void setEtapa(Etapa e) {
 		this.etapa = e;
+	}
+	
+	public void modificarMargen(double margen) {
+		
+	}
+	
+	
+	// TODO: como hago para que esto no esté publico?
+	public void setMargen(double margen) {
+		this.margenGanancia = margen;
+	}
+	
+	public void cancelar() {
+		if(!this.objetivo.contains(Proyecto.TEXTOCANCELACION)) {
+			this.objetivo+=Proyecto.TEXTOCANCELACION;
+		}
 	}
 }

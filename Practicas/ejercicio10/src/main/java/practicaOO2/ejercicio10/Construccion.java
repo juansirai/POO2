@@ -13,4 +13,12 @@ public class Construccion implements Etapa{
 		
 	}
 
+	@Override
+	public void modificarMargen(Proyecto contexto, double margen) {
+		if(margen<=0.1 && margen>=0.08) {
+			contexto.setMargen(margen);
+		}
+		
+	}
+
 }
