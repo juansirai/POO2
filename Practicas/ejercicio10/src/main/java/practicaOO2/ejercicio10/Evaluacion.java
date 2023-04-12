@@ -10,7 +10,7 @@ public class Evaluacion implements Etapa{
 
 	@Override
 	public void modificarMargen(Proyecto contexto, double margen) {
-		if(margen<=0.15 && margen>=0.11) {
+		if((margen<=0.15) && (margen>=0.11)) {
 			contexto.setMargen(margen);
 		}
 		

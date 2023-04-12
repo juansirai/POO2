@@ -1,6 +1,8 @@
 package practicaOO2.ejercicio10;
 
+import java.time.Duration;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class Proyecto {
 	private String nombre;
@@ -33,13 +35,18 @@ public class Proyecto {
 		this.etapa = new Construccion();
 	}
 	
+	public void setCostoFijo(double cf) {
+		this.costoFijoIntegrantes = cf;
+	}
+	
 	/*
 	 * Retorna la suma de los costos de las personas 
 	 * involucradas. Considerar que las personas trabaja 
 	 * todos los días que dura el proyecto
 	 * */
 	public double costoProyecto() {
-		return this.numIntegrantes * this.costoFijoIntegrantes;
+		long daysBetween = ChronoUnit.DAYS.between(this.fechaIni, this.fechaFin);
+		return this.numIntegrantes * this.costoFijoIntegrantes * daysBetween ;
 	}
 	
 	
@@ -47,6 +54,7 @@ public class Proyecto {
 	 * de ganancia al costo del proyecto
 	 * */
 	public double precioProyecto() {
+		
 		return this.costoProyecto() * (1+this.margenGanancia);
 	}
 	
@@ -59,7 +67,7 @@ public class Proyecto {
 	}
 	
 	public void modificarMargen(double margen) {
-		
+		this.etapa.modificarMargen(this, margen);
 	}
 	
 	
@@ -72,5 +80,9 @@ public class Proyecto {
 		if(!this.objetivo.contains(Proyecto.TEXTOCANCELACION)) {
 			this.objetivo+=Proyecto.TEXTOCANCELACION;
 		}
+	}
+	
+	public String getObjetivo() {
+		return this.objetivo;
 	}
 }
