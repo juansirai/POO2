@@ -27,7 +27,7 @@ public class TopografiaMixta implements Topografia{
 		return this.components;
 	}
 	
-	
+	// TODO; se podria haber hecho con un override al metodo equals! Investigar como funciona
 	public boolean esIgualA(Topografia t) {
 		if(!(t.getComponents() instanceof List<?>))
 				return false;
