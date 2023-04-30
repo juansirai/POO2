@@ -7,9 +7,9 @@ public class Novedad extends Recomendador{
 
 	@Override
 	public List<Pelicula> ordenar(Decodificador d) {
-		// TODO Auto-generated method stub
+		// ordena por las peliculas mas recientes de la grilla
 		return d.getGrilla().stream()
-				.sorted( (p1, p2) -> Integer.compare(p1.getAnioEstreno(), p2.getAnioEstreno()))
+				.sorted( (p1, p2) -> Integer.compare(p2.getAnioEstreno(), p1.getAnioEstreno()))
 				.collect(Collectors.toList());
 	}
 

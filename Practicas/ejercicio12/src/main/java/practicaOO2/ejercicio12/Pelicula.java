@@ -9,7 +9,7 @@ public class Pelicula {
 	private double puntaje;
 	private List<Pelicula> peliculasSimilares;
 	
-	public Pelicula(String titulo, int anioEstreno, float puntaje) {
+	public Pelicula(String titulo, int anioEstreno, double puntaje) {
 		this.titulo = titulo;
 		this.anioEstreno = anioEstreno;
 		this.puntaje = puntaje;
@@ -42,6 +42,10 @@ public class Pelicula {
 	}
 	public double getPuntaje() {
 		return this.puntaje;
+	}
+	
+	public List<Pelicula> getSimilares(){
+		return this.peliculasSimilares;
 	}
 	
 
