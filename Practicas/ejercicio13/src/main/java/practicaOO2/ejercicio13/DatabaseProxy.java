@@ -63,5 +63,9 @@ public class DatabaseProxy implements DatabaseAccess{
 		else
 			return -1;
 	}
+	
+	public List<Usuario> getUsuarios(){
+		return this.usuarios;
+	}
 
 }
