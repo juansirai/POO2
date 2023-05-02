@@ -15,6 +15,8 @@
 * [Ejercicio 10](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio10/src)
 * [Ejercicio 11](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio11/src)
 * [Ejercicio 12](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio12/src)
+* [Ejercicio 13](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio13/src)
+* [Ejercicio 14](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio14/src)
 
 ## UML
 * [UMLs](https://github.com/juansirai/POO2/tree/main/UML)
