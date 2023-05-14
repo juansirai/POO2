@@ -1,38 +1,35 @@
 package practicaOO2.ejercicio18;
 
 public class SinTacc {
-	private double pan;
-	private double aderezo;
-	private double principal;
-	private double adicional;
+	private double costo;
+	private final double pan = 150;
+	private final double aderezo = 18;
+	private final double principal = 250;
+	private final double adicional = 200;
 	
-	public SinTacc(double pan,double aderezo,double principal,double adicional) {
-		this.pan = pan;
-		this.aderezo = aderezo;
-		this.principal = principal;
-		this.adicional = adicional;
+	public SinTacc() {
+		this.costo = 0;
 		
 	}
 	
-	public SinTacc() {};
 	
-	public void addPan(double pan) {
-		this.pan = pan;
+	public void addPan() {
+		this.costo += pan;
 	}
 	
-	public void addAderezo(double a) {
-		this.aderezo = a;
+	public void addAderezo() {
+		this.costo += aderezo;
 	}
 	
-	public void addPrincipal(double p) {
-		this.principal = p;
+	public void addPrincipal() {
+		this.costo += principal;
 	}
 	
-	public void addAdicional(double p) {
-		this.adicional = p;
+	public void addAdicional() {
+		this.costo += adicional;
 	}
 	
 	public double getCosto() {
-		return this.pan + this.aderezo + this.principal + this.adicional;
+		return this.costo;
 	}
 }

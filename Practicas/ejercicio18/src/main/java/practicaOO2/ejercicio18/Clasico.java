@@ -1,35 +1,33 @@
 package practicaOO2.ejercicio18;
 
 public class Clasico {
+	private double costo;
+	private final double pan = 100;
+	private final double aderezo = 20;
+	private final double principal = 300;
+	private final double adicional = 80;
 	
-	private double pan;
-	private double aderezo;
-	private double principal;
-	private double adicional;
-	
-	public Clasico(double pan,double aderezo,double principal,double adicional) {
-		this.pan = pan;
-		this.aderezo = aderezo;
-		this.principal = principal;
-		this.adicional = adicional;
-
+	public Clasico() {
+		this.costo = 0;
 	}
 	
-	public Clasico() {};
-	
-	public void addPan(double pan) {
-		this.pan = pan;
+	public void addPan() {
+		this.costo += pan;
 	}
 	
-	public void addAderezo(double a) {
-		this.aderezo = a;
+	public void addAderezo() {
+		this.costo += aderezo;
 	}
 	
-	public void addPrincipal(double p) {
-		this.principal = p;
+	public void addPrincipal() {
+		this.costo += principal;
+	}
+	
+	public void addAdicional() {
+		this.costo += adicional;
 	}
 	
 	public double getCosto() {
-		return this.pan + this.aderezo + this.principal + this.adicional;
+		return this.costo;
 	}
 }

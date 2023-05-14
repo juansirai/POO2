@@ -12,14 +12,26 @@ public class BuilderClasico implements Builder{
 
 	@Override
 	public void addPan() {
-		// TODO Auto-generated method stub
-		
+		this.clasico.addPan();
 	}
 
 	@Override
 	public void addPrincipal() {
-		// TODO Auto-generated method stub
-		
+		this.clasico.addPrincipal();
+	}
+	
+	@Override
+	public void addAderezo() {
+		this.clasico.addAderezo();
+	}
+	
+	@Override
+	public void addAdicional() {
+		this.clasico.addAdicional();
+	}
+	
+	public Clasico getResult() {
+		return this.clasico;
 	}
 
 }

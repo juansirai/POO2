@@ -1,30 +1,29 @@
 package practicaOO2.ejercicio18;
 
 public class Vegetariano {
-
-	private double pan;
-	private double principal;
-	private double adicional;
+	private double costo;
+	private final double pan = 120;
+	private final double principal = 200;
+	private final double adicional = 100;
 	
-	public Vegetariano(double pan,double principal,double adicional) {
-		this.pan = pan;
-		this.principal = principal;
-		this.adicional = adicional;
+	public Vegetariano() {
+		this.costo = 0;
 	}
 	
-	public Vegetariano() {};
-	
-	public void addPan(double pan) {
-		this.pan = pan;
+	public void addPan() {
+		this.costo += pan;
 	}
 	
-
-	public void addPrincipal(double p) {
-		this.principal = p;
+	public void addPrincipal() {
+		this.costo += principal;
+	}
+	
+	public void addAdicional() {
+		this.costo += adicional;
 	}
 	
 	public double getCosto() {
-		return this.pan +  this.principal + this.adicional;
+		return this.costo;
 	}
 
 }
