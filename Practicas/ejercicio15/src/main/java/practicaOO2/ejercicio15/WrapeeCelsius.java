@@ -9,10 +9,11 @@ public class WrapeeCelsius extends WeatherWrapper{
 	
 	@Override
 	public String displayData() {
-		return super.displayData() + "Temperatura Celsius: "+this.getCelsius();
+		return super.displayData() + " Temperatura Celsius: "+this.getCelsius();
 	}
 	
 	private double getCelsius() {
-		return (super.getTemperatura()-32)/1.8;
+		double raw = (super.getTemperatura()-32)/1.8;
+		return Math.round(raw * 100.0)/100.0;
 	}
 }

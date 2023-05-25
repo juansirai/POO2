@@ -1,9 +1,0 @@
-package practicaOO2.ejercicio01;
-
-public class Retweet extends Tweet{
-
-	public Retweet(String texto) {
-		super(texto);
-	}
-
-}

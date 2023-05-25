@@ -1,6 +1,6 @@
 package practicaOO2.ejercicio11;
 
-public abstract class AdapterConnection implements Connection{
+public class AdapterConnection implements Connection{
 	private CuatroGConnection adaptee;
 
 	public AdapterConnection() {

@@ -26,8 +26,9 @@ public class Dispositivo {
 		return this.display.showBanner(this.connection.pict());
 	}
 	
-	public void configurarCRC(Strategy_Calculator cal) {
+	public String configurarCRC(Strategy_Calculator cal) {
 		this.calculator = cal;
+		return "Se ha cambiado CRC";
 	}
 
 }

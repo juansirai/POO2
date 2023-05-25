@@ -5,8 +5,10 @@ public class Provisoria extends EstadoExcursion{
 	@Override
 	public void inscribir(Usuario u, Excursion contexto) {
 		contexto.agregarUsuario(u);
-		if(contexto.difMin()<=0)
+
+		if(contexto.difMin()==0) {
 			contexto.setEstado(new Definitiva());
+		};
 	}
 
 	

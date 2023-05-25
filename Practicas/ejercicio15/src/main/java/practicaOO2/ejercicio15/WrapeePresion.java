@@ -9,7 +9,7 @@ public class WrapeePresion extends WeatherWrapper{
 	
 	@Override
 	public String displayData() {
-		return super.displayData() + "Presion: "+super.getPresion();
+		return super.displayData() + " Presion: "+super.getPresion();
 	}
 
 }

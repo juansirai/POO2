@@ -9,7 +9,7 @@ public class WrapeeFahrenheit extends WeatherWrapper{
 	
 	@Override
 	public String displayData() {
-		return super.displayData() + "Temperatura Fahrenheit: "+super.getTemperatura();
+		return super.displayData() + " Temperatura Fahrenheit: "+super.getTemperatura();
 	}
 
 }

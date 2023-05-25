@@ -9,6 +9,6 @@ public class WrapeeRadiacion extends WeatherWrapper{
 
 	@Override
 	public String displayData() {
-		return super.displayData() + "Radiacion: "+super.getRadiacionSolar();
+		return super.displayData() + " Radiacion: "+super.getRadiacionSolar();
 	}
 }

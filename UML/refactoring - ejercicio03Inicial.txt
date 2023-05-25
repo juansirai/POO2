@@ -1,0 +1,60 @@
+@startuml
+
+Persoona --> Llamada:  0..* +lista1
+Persoona -> Persoonal: +sis
+Persoonal --> Persoona: 0..* +lista1
+Persoonal --> Llamada: 0..* +lista2
+Persoonal -> GuiaTelefonica: +lista3
+
+
+
+class GuiaTelefonica{
+  +guia:String [*]
+}
+class Llamada{
+  #tipoDeLlamada:String
+  -emisor: String
+  -remitente: String
+  +dur: int
+
+  +<<create>> Llamada():Llamada
+  +<<create>> Llamada(s:String, p:String, p2:String,p3:Persona,dur:int):Llamada
+  +getTipoLlamada():String
+  +setTipoLlamada(tipoDeLlamada:String):void
+  +setEmisor(q:String):void
+  +getRemitente():String
+  +setRemitente(remitente:String):void
+  
+}
+class Persoona{
+ +t:String
+ +nya:String
+ +tel:String
+ +cuit:String
+ +doc:String
+ +getLista1():Llamada[*]
+ +setLista1(lista1:Llamada[*]):void
+ +getT():String
+ +setT(t:String):void
+ +getNya():String
+ +setNya(nya:String):void
+ +getTel():String
+ +setTel(tel:String):void
+ +getCuit():String
+ +setCuit(cuit:String):void
+ +getDoc():String
+ +setDoc(doc:String):void
+}
+
+class Persoonal{
+{static}descuentoJur:double
+{static}descuentoFis:double
++agregarTelefono(str:String):boolean
++registrarUsuario(data:String, nombre:String, t:String):Persoona
++eliminarUsuario(p:Persoona):boolean
++registrarLlamada(q:Persoona, q2:Persoona, t:String, d:int):Llamaada
++calcularMontoTotalLlamadas(p:Persoona):double
++cantidadDeUsuarios():int
++existeUsuario(personaPersoona):boolean
+}
+@enduml

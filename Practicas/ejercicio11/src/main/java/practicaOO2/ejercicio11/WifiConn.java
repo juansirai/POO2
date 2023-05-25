@@ -3,10 +3,13 @@ package practicaOO2.ejercicio11;
 public class WifiConn implements Connection{
 	private String pict;
 
+	public WifiConn() {
+		this.pict = "WIFI";
+	}
 	@Override
 	public String sendData(String data, long crc) {
 		// TODO Auto-generated method stub
-		return null;
+		return "Sending data WIFI";
 	}
 
 	@Override

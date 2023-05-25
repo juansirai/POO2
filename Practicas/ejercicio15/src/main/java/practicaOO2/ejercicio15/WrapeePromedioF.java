@@ -9,14 +9,15 @@ public class WrapeePromedioF extends WeatherWrapper{
 	
 	@Override
 	public String displayData() {
-		return super.displayData()+"Promedio Temperaturas: "+this.getPromedio();
+		return super.displayData()+" Promedio Temperaturas: "+this.getPromedio();
 		
 	}
 	
 	private double getPromedio() {
-		return super.getTemperaturasFahrenheit()
+		double raw= super.getTemperaturasFahrenheit()
 				.stream().mapToDouble(t->t.doubleValue())
 				.average().orElse(0);
+		return Math.round(raw*100.0)/100.0;
 	}
 
 }

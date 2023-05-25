@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\juans\OneDrive\Documentos\Lic Sistemas\3 - Tercer Año\01 - Primer Semestre\01 - Orientacion a Objetos 2\Practica OO2\Practicas\ejercicio18"/>
+			<item value="C:\Users\juans\OneDrive\Documentos\Lic Sistemas\3 - Tercer Año\01 - Primer Semestre\01 - Orientacion a Objetos 2\Practica OO2\Practicas\ejercicio05\src\test\java\practicaOO2\ejercicio05\DirectorioTest.java"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -25,13 +27,41 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="practicaOO2.ejercicio01"/>
+			<item value="practicaOO2.refactoring_ejercicio03"/>
+			<item value="practicaOO2.ejercicio18"/>
+			<item value="practicaOO2.ejercicio15"/>
+			<item value="practicaOO2.ejercicio14"/>
+			<item value="practicaOO2.ejercicio13"/>
+			<item value="practicaOO2.ejercicio12"/>
+			<item value="practicaOO2.ejercicio11"/>
+			<item value="practicaOO2.ejercicio10"/>
+			<item value="practicaOO2.ejercicio08"/>
+			<item value="practicaOO2.ejercicio07"/>
+			<item value="practicaOO2.ejercicio06"/>
+			<item value="practicaOO2.ejercicio05"/>
+			<item value="practicaOO2.ejercicio04"/>
+			<item value="practicaOO2.ejercicio03"/>
+			<item value="practicaOO2.ejercicio02_b"/>
 		</list>
 		<list key="groupId">
 			<item value="practicaOO2"/>
 		</list>
 		<list key="artifactId">
-			<item value="ejercicio01"/>
+			<item value="refactoring-ejercicio03"/>
+			<item value="ejercicio18"/>
+			<item value="ejercicio15"/>
+			<item value="ejercicio14"/>
+			<item value="ejercicio13"/>
+			<item value="ejercicio12"/>
+			<item value="ejercicio11"/>
+			<item value="ejercicio10"/>
+			<item value="ejercicio08"/>
+			<item value="ejercicio07"/>
+			<item value="ejercicio06"/>
+			<item value="ejercicio05"/>
+			<item value="ejercicio04"/>
+			<item value="ejercicio03"/>
+			<item value="ejercicio02-b"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -63,5 +93,9 @@
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
 		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
 </section>

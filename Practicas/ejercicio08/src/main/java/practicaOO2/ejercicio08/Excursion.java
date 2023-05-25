@@ -63,6 +63,10 @@ public class Excursion {
 		return this.inscriptos.size();
 	}
 	
+	public int cantEspera() {
+		return this.listaEspera.size();
+	}
+	
 	public int getMax() {
 		return this.cupo_maximo;
 	}
@@ -78,6 +82,8 @@ public class Excursion {
 	public int difMax() {
 		return this.getMax() - this.cantInscriptos();
 	}
+	
+	// TODO: es preferible dejar estos métodos publicos? O darle la potestad al estado para que acceda a la lista?
 	
 	public void agregarUsuario(Usuario u) {
 		this.inscriptos.add(u);
@@ -108,6 +114,10 @@ public class Excursion {
 							.map(u -> u.getEmail())
 							.collect(Collectors.toList());
 		return String.join(", ", mails);
+	}
+	
+	public EstadoExcursion getEstado() {
+		return this.estado;
 	}
 	
 }
