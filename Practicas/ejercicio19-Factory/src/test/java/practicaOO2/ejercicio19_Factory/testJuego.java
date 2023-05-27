@@ -1,6 +1,8 @@
 package practicaOO2.ejercicio19_Factory;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -54,5 +56,15 @@ public class testJuego {
 		assertEquals(90, mago.getVida());
 		this.juego.combatir(arquero, mago);
 		assertEquals(85, mago.getVida());
+	}
+	
+	@Test
+	public void testVida() {
+		assertTrue(this.juego.combatir(arquero, mago)); // 95
+		int i;
+		for(i=0;i<19;i++) {
+			this.juego.combatir(arquero, mago);
+		}
+		assertFalse(this.juego.combatir(arquero, mago));
 	}
 }
