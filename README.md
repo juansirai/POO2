@@ -2,6 +2,8 @@
 
 ## Practices of Object-oriented programming
 
+### Patterns
+
 * [Ejercicio 01](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio01/src)
 * [Ejercicio 02](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio02/src)
 * [Ejercicio 02 - B](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio02-b/src)
@@ -16,7 +18,14 @@
 * [Ejercicio 11](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio11/src)
 * [Ejercicio 12](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio12/src)
 * [Ejercicio 13](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio13/src)
-* [Ejercicio 14](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio14/src)
+* [Ejercicio 15](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio15/src)
+* [Ejercicio 18](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio18/src)
+* [Ejercicio 19](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio19-Factory/src)
+* [Ejercicio 21](https://github.com/juansirai/POO2/tree/main/Practicas/ejercicio21/src)
+
+## Refactoring
+* [Ejercicio 3](https://github.com/juansirai/POO2/tree/main/Practicas/refactoring-ejercicio03/src)
+
 
 ## UML
 * [UMLs](https://github.com/juansirai/POO2/tree/main/UML)
