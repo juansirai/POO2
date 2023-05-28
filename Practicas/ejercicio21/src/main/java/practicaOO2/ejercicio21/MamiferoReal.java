@@ -95,21 +95,15 @@ public class MamiferoReal implements Mamifero{
 	
 	@Override
 	public boolean tieneComoAncestroA(Mamifero mamifero) {
-		boolean existe;
-		if(this.equals(mamifero)) {
-			existe = true;
-		}
-		else {
-			existe = this.madre.tieneComoAncestroA(mamifero) || this.padre.tieneComoAncestroA(mamifero);
-		}
-		return existe;
+		return ancestrosDirectos(mamifero) || ancestrosIndirecto(mamifero) ;
+	}
+	private boolean ancestrosDirectos(Mamifero mamifero) {
+		return this.getMadre().equals(mamifero) || this.getPadre().equals(mamifero);
 	}
 	
-	/*otra opcion mas simple pero menos eficiente
-	 @Override
-	public boolean tieneComoAncestroA(Mamifero mamifero) {
-		return this.equals(mamifero)|| this.madre.tieneComoAncestroA(mamifero) || this.padre.tieneComoAncestroA(mamifero);
+	private boolean ancestrosIndirecto(Mamifero mamifero) {
+		return this.getMadre().tieneComoAncestroA(mamifero) || this.getPadre().tieneComoAncestroA(mamifero);
 	}
-	 */
+
 
 }
