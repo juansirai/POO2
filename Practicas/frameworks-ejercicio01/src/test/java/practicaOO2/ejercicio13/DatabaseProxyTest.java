@@ -19,7 +19,7 @@ public class DatabaseProxyTest {
 	
 	@BeforeAll
 	static void setUpLogger() throws SecurityException, IOException {
-		Logger.getLogger("proxy").addHandler(new FileHandler("log.txt"));
+		Logger.getLogger("proxy").addHandler(new FileHandler("logger.txt"));
 	}
 	
 	@BeforeEach

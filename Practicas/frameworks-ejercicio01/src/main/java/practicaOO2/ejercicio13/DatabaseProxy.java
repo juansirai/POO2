@@ -3,6 +3,8 @@ package practicaOO2.ejercicio13;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DatabaseProxy implements DatabaseAccess{
 	private boolean sesionIniciada;
@@ -36,6 +38,8 @@ public class DatabaseProxy implements DatabaseAccess{
 			exito = usuario.validarPass(p);
 		}
 		this.sesionIniciada = exito;
+		if(!exito)
+			Logger.getLogger("proxy").log(Level.SEVERE,"Error en inicio de sesion");
 	}
 	
 	
@@ -50,18 +54,22 @@ public class DatabaseProxy implements DatabaseAccess{
 	
 	@Override
 	public Collection<String> getSearchResults(String queryString) {
-		if (sesionIniciada)
-			return this.database.getSearchResults(queryString);
-		else
-			return null;
+		Collection<String> query = null;
+		if (sesionIniciada) {
+			query =  this.database.getSearchResults(queryString);
+			Logger.getLogger("proxy").log(Level.INFO,"Busqueda Valida");
+		}
+		return query;
 	}
 
 	@Override
 	public int insertNewRow(List<String> rowData) {
-		if(sesionIniciada)
-			return this.database.insertNewRow(rowData);
-		else
-			return -1;
+		int rows = -1;
+		if(sesionIniciada) {
+			rows =  this.database.insertNewRow(rowData);
+			Logger.getLogger("proxy").log(Level.WARNING, "Insersion exitosa");
+		}
+		return rows;
 	}
 	
 	public List<Usuario> getUsuarios(){
