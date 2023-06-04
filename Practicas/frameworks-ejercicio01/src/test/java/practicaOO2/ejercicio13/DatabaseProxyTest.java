@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.logging.FileHandler;
+import java.util.logging.Handler;
 import java.util.logging.Logger;
 
 import org.junit.jupiter.api.BeforeAll;
@@ -19,7 +20,11 @@ public class DatabaseProxyTest {
 	
 	@BeforeAll
 	static void setUpLogger() throws SecurityException, IOException {
-		Logger.getLogger("proxy").addHandler(new FileHandler("logger.txt"));
+		Handler handlerUpper = new FileHandler("loggerUpper.txt");
+		handlerUpper.setFormatter(new FormatterUpper());
+		Handler handlerJson = new FileHandler("loggerJson.txt");
+		handlerJson.setFormatter(new FormatterJson());
+		Logger.getLogger("proxy").addHandler(handlerJson);
 	}
 	
 	@BeforeEach
