@@ -67,7 +67,7 @@ public class DatabaseProxy implements DatabaseAccess{
 		int rows = -1;
 		if(sesionIniciada) {
 			rows =  this.database.insertNewRow(rowData);
-			Logger.getLogger("proxy").log(Level.WARNING, "Insersion exitosa");
+			Logger.getLogger("proxy").log(Level.WARNING, "Insercion exitosa");
 		}
 		return rows;
 	}

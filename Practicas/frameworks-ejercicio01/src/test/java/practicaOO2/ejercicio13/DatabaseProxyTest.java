@@ -22,9 +22,13 @@ public class DatabaseProxyTest {
 	static void setUpLogger() throws SecurityException, IOException {
 		Handler handlerUpper = new FileHandler("loggerUpper.txt");
 		handlerUpper.setFormatter(new FormatterUpper());
-		Handler handlerJson = new FileHandler("loggerJson.txt");
+		Handler handlerJson = new FileHandler("loggerJson.json");
 		handlerJson.setFormatter(new FormatterJson());
-		Logger.getLogger("proxy").addHandler(handlerJson);
+		HandlerHide handlerHide = new HandlerHide(handlerUpper);
+		handlerHide.addWord("inicio");
+		handlerHide.addWord("exitosa");
+		Logger.getLogger("proxy").addHandler(handlerHide);
+		
 	}
 	
 	@BeforeEach
