@@ -1,4 +1,4 @@
-###1) Cuando hablamos de reuso en el marco del desarrollo de software, ¿a qué nos referimos?
+### 1) Cuando hablamos de reuso en el marco del desarrollo de software, ¿a qué nos referimos?
 Consiste en utilizar software existente (a nivel aplicacion, component u objeto), a fin de poder desarrollar software de calidad en menor tiempo y costo.
 Algunos de los beneficios de reutilizar software:
 * Mayor confianza
@@ -7,19 +7,37 @@ Algunos de los beneficios de reutilizar software:
 * Uso de standares
 * Rapidez en desarrollo
 
-###2)¿Cuáles son las dificultades que encontramos cuando intentamos reusar código?
+### 2)¿Cuáles son las dificultades que encontramos cuando intentamos reusar código?
 Algunas de las dificultades que pueden ocurrir son:
 * Puede incrementar el costo de mantenimiento, en caso que el codigo fuente no este a disposicion.
 * Falta de soporte
 * Algunos desarrolladores prefieren desarrollar su propio código: para tener mayor control sobre él y/o porque lo consideran mas desafiante.
 * Falta de madurez en las tecnicas para clasificar, catalogar software.
 
-###3) Cuando aplicamos patrones de diseño, ¿qué estamos reusando? ¿De qué manera los patrones de diseño atacan las dificultades del reúso?
+### 3) Cuando aplicamos patrones de diseño, ¿qué estamos reusando? ¿De qué manera los patrones de diseño atacan las dificultades del reúso?
 Al utilizar patrones, reutilizamos muchas veces el diseño de la estructura de clases y comportamientos, para atacar un problema común.
 Es una forma de reutilizar conocimiento abstracto acerca de un problema y su solución.
 
-Cuando utilizamos librerías de clases, ¿qué estamos reusando? ¿a qué casos apuntan? ¿De qué manera atacan las librerías de clases las dificultades de reúso? 
-Cuando utilizamos frameworks orientados a objetos, ¿qué estamos reusando? ¿a qué casos apuntan? ¿De qué manera atacan los frameworks las dificultades de reúso? 
+Dificultades de reúso: 
+
+* Dificultades de mantenimiento: Los patrones de diseño están pensados justamente para lograr soluciones de software escalables y perdurables.
+* Programadores prefieren hacer todo ellos: los patrones de diseño están validados y avalados por la comunidad de programadores como soluciones eficientes ante problemas habituales.
+* Hacer software reusable es dificil y costoso: los patrones de diseño ayudan a abstraer la solución a problemas comunes, de forma tal que sea fácil de replicar en distintos escenarios.
+* Esfuerzo adicional para utilizarlos y aprenderlos: existe mucha bibliografía al respecto en el caso de patrones de diseño.
+
+### Cuando utilizamos librerías de clases, ¿qué estamos reusando? ¿a qué casos apuntan? ¿De qué manera atacan las librerías de clases las dificultades de reúso? 
+
+Las librerías de clase, resuelven también problemas comunes a la mayoría de las aplicaciones (como por ejemplo manejo de archivos, fechas, etc)
+Cada clase en la librería resuelve un problema concreto, independientemente del contexto de uso. Luego nuestro codigo controla los objetos de la librería.
+
+### Cuando utilizamos frameworks orientados a objetos, ¿qué estamos reusando? ¿a qué casos apuntan? ¿De qué manera atacan los frameworks las dificultades de reúso? 
+
+Un framework es una aplicación "semi-completa", reusable, que puede ser especializada para producir aplicaciones a medida.
+Es un conjunto de clases concretas y abstractas relacionadas, que provee una arquitectura reusable.
+
+El framework define el esqueleto, y el desarrollador define sus propias características.
+A diferencia de una librería, el framwork produce una estructura coherente, en lugar de un conjunto de "clases utiles"
+
 Por lo general, ¿es posible y lógico reusar, de forma aislada, solo algunas clases de un framework? ¿es posible y lógico utilizar solo algunas clases de una librería de clases? Justifique. 
 De acuerdo a el tipo de problema que atacan, ¿como se clasifican los frameworks? 
 ¿A que nos referimos con los términos hot spot y frozen spot?
